@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>第一篇博客</title>
+      <link href="/2022/10/07/title/"/>
+      <url>/2022/10/07/title/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>搭建这个博客我差不多花了一周的时间，前前后后一直在犯错，也一直在不断地学习<br>对我个人而言，拥有一个属于自己的个人博客是一件……很帅的事情，我可以将我生活中的感受放到这里，将我所学到的知识放到这里<br>这本身就很浪漫</p><h1 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h1><h2 id="准备–Github、Node-js、Vue"><a href="#准备–Github、Node-js、Vue" class="headerlink" title="准备–Github、Node.js、Vue"></a>准备–Github、Node.js、Vue</h2><h3 id="步骤1、Github"><a href="#步骤1、Github" class="headerlink" title="步骤1、Github"></a>步骤1、Github</h3><p>首先我们需要知道，无论是搭建个人博客还是其他的可以被他人访问的网站，我们都需要一个可以被公网访问的服务器和域名。大多数的服务器和域名都是需要花钱购买的，但作为一个连黄油都只玩盗版的资深白嫖党，这些东西我们同样可以白嫖<br>Github就是这么一个可以让我们免费使用的开源的服务器<br><font style=background:#FFB6C1>这个网站是外国的，所以可能偶尔会出现摆烂状态，但并不影响我的白嫖</font></p><h4 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h4><p>在浏览器搜索Github官网，然后注册账号<br>因为是外网的原因，可能会出现网站打不开的情况，这并不是电脑的问题，只需要过段时间再去试试就可以了<br>注册页面全是英文，不过可以使用浏览器的翻译功能</p><h4 id="创建个人仓库"><a href="#创建个人仓库" class="headerlink" title="创建个人仓库"></a>创建个人仓库</h4><p>创建账号后，在Github首页的右上角头像的位置那里找到 <font style=background:#FFB6C1>Your repository</font><br><img src="/images/repositories.png" alt="Your repository"><br>然后点击那个绿色的 <font style=background:#FFB6C1>New</font> 按钮创建新的仓库<br><img src="/images/New.png" alt="New repository"><br>随后如图<br><img src="/images/myNew.png" alt="myNEW"><br>这里的Repository name格式必须是 <font style=background:#FFB6C1>用户名.github.io</font>  这里因为我本人已经创建过了，所以会显示错误<br>Public和Private是公共和私人的意思，因为我们的个人博客是想要被别人访问的，所以要选择 <font style=background:#FFB6C1>Public</font><br>其他的没有选择的必要，最后创建即可</p><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p>这个的作用是让我们的计算机可以远程连接Github上的个人仓库，可以将我们的博客项目发送到Github上</p><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p>可以在百度上搜索Git官网下载，不过这样下载速度很慢<br>建议使用 <a href="https://registry.npmmirror.com/binary.html?path=git-for-windows/">https://registry.npmmirror.com/binary.html?path=git-for-windows/</a>  这个链接下载</p><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>安装时首先选择自己的安装位置，这个可以不用放在C盘<br>其他的全部无脑  <font style=background:#FFB6C1> Next </font> </p><h4 id="绑定账户"><a href="#绑定账户" class="headerlink" title="绑定账户"></a>绑定账户</h4><p>在桌面上随便找一处空白地方，右键点击后会出现如下<br><img src="/images/Hexo.png" alt="Hexo"><br>点击Git bash 输入以下信息绑定自己的github账户</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>随后可以检查一下自己账户</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure><p>确认无误后再次输入</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的Github注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>什么都不管，直接三个回车即可，默认不需要密码 <em>当然，怎么设置密码我也不知道</em><br>在 &lt;font style&#x3D;background: #ffb6c1&gt;C:\Users\个人用户.ssh</font> 中找到 &lt;font style&#x3D;background: #ffb6c1&gt;id_rsa.pub</font>密钥文件，将里面的内容全部复制<br>之后回到Github中</p><h2 id="Hexo使用"><a href="#Hexo使用" class="headerlink" title="Hexo使用"></a>Hexo使用</h2><h2 id="butterfly美化"><a href="#butterfly美化" class="headerlink" title="butterfly美化"></a>butterfly美化</h2><h1 id="可能出现的错误"><a href="#可能出现的错误" class="headerlink" title="可能出现的错误"></a>可能出现的错误</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 自我感悟 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/10/05/hello-world/"/>
       <url>/2022/10/05/hello-world/</url>
