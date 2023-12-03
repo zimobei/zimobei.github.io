@@ -1,0 +1,23 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+
+hero:
+  name: "Moper"
+  text: "前端组件库"
+  tagline: 一个用于整理前端笔记和一些自定义组件的网站
+  actions:
+    - theme: alt
+      text: 奇奇怪怪
+      link: /Author
+features:
+  - title: 前端自定义组件
+    details: 包含一些Moper实现的前端组件的设计思路和具体代码
+  - title: HTML
+    details: 一些HTML的具体例子，方便初学者可以直观地了解具体使用
+  - title: CSS
+    details: Moper在CSS学习过程中对CSS的一些个人理解和学习笔记
+  - title: JS/TS
+    details: JS/TS在前端有着十分重要的地位，不过对于Moper来说......Moepr不知道，Moper还在学......
+---
+

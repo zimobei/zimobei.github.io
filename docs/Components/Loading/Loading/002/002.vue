@@ -1,0 +1,140 @@
+<template>
+    <div class="container">
+        <div class="circle">
+            <span style="--i:0"></span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:15"></span>
+            <span style="--i:16"></span>
+            <span style="--i:17"></span>
+            <span style="--i:18"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+        </div>
+        <div class="circle">
+            <span style="--i:0"></span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:15"></span>
+            <span style="--i:16"></span>
+            <span style="--i:17"></span>
+            <span style="--i:18"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+        </div>
+    </div>
+</template>
+<style scoped>
+.container{
+    margin-top: 70px;
+}
+/* 背景基础样式 */
+.container{
+    /* flex下子元素默认行排列 */
+    display: flex;
+}
+/* 圆环基础样式 */
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    /* 调整外边距使两个圆环相邻重合 */
+    margin: 0 -7px;
+}
+/* span盒子基础样式 */
+.circle span {
+    /* 定义每个span盒子都与背景盒子重合 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 伪元素光点基础样式 */
+.circle span::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--yellow);
+    border-radius: 50%;
+    right: 0;
+    box-shadow:
+        0 0 10px var(--yellow) 
+        0 0 20px var(--yellow) 
+        0 0 40px var(--yellow) 
+        0 0 60px var(--yellow) 
+        0 0 80px var(--yellow) 
+        0 0 100px var(--yellow);
+}
+/* span盒子关键样式 */
+.circle span {
+    /* 旋转每个span盒子使全部光点错开，由于每个span盒子背景色为空，所以视觉上像是一个盒子中放置了多个伪元素 */
+    transform: rotate(calc(18deg*var(--i)));
+}
+/* 伪元素光点关键样式 */
+.circle span::before {
+    /* 确保每个span盒子旋转角度后的伪元素光点仍处于背景盒子之中 */
+    top: calc(50% - 7.5px);
+    /* 初始化时缩小小球 */
+    transform: scale(0.4);
+    /* 添加动画设置小球缩放 */
+    animation: animate 4s linear infinite;
+    /* 设置动画延迟，使小球按照顺序缩放 */
+    animation-delay: calc(0.1s*var(--i));
+}
+/* 定义第二个圆环样式 */
+.circle:nth-child(2){
+    /* 旋转180度 */
+    transform: rotate(-180deg);
+}
+/* 定义第二个圆环的伪元素光点 */
+.circle:nth-child(2) span::before{
+    /* 设置整体延迟 */
+    animation-delay: calc(-0.1s*var(--i));
+}
+/* 为光点添加颜色变化 */
+.container{
+    animation: animateColor 8s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+    50%, 100%{
+        transform: scale(0.4);
+    }
+}
+@keyframes animateColor{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+</style>

@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a}from"./chunks/framework.ekaVIUcx.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"JSTSStudy.md","filePath":"JSTSStudy.md"}'),r={name:"JSTSStudy.md"};function o(s,c,n,d,S,p){return e(),a("div")}const m=t(r,[["render",o]]);export{i as __pageData,m as default};
